@@ -27,7 +27,7 @@ export default {
          },
       }),
       resolve(),
-      commonjs(),
+     commonjs(),
       postcss({
          extract: true,
       }),
