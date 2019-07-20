@@ -4,11 +4,13 @@ const postcss_preset_env = require('postcss-preset-env');
 const postcss_Import = require('postcss-import');
 const postcss_Url = require('postcss-url');
 const purgecss = require('@fullhuman/postcss-purgecss');
+const precss = require('precss');
 
 const production = !process.env.ROLLUP_WATCH;
 
 module.exports = {
-   plugins: [
+  plugins: [
+      precss(),
       postcss_Import(),
       postcss_Url(),
       require('tailwindcss'),
